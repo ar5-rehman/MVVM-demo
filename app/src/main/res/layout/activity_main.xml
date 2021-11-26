@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2C2E2E"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/rpm_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/rpm_progress"
+        android:fontFamily="@font/nexabold"
+        android:layout_marginTop="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/arc"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/arrow"/>
+
+    <ImageView
+        android:id="@+id/battery"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/redbattery"/>
+
+    <ImageView
+        android:id="@+id/temperature"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/battery"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/temp"/>
+
+    <TextView
+        android:id="@+id/tilt_angle_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/nexabold"
+        android:textColor="#ffffff"
+        />
+
+    <com.marcinmoskala.arcseekbar.ArcSeekBar
+        android:id="@+id/titl_angle"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        app:progressBackgroundColor="@color/sliderback"
+        app:progressBackgroundWidth="20dp"
+        app:progress="0"
+        app:progressWidth="20dp"
+        app:roundEdges="true"
+        app:thumb="@drawable/thumb"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/arc"/>
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titl_angle"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <ImageView
+            android:id="@+id/left"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/left"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/right"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/right"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/speed_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/layout"
+        android:fontFamily="@font/nexabold"
+        android:textSize="35sp"
+        android:textColor="#ffffff"
+        />
+
+    <TextView
+        android:id="@+id/speedkp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@+id/speed_data"
+        android:layout_marginTop="248dp"
+        android:fontFamily="@font/nexabold"
+        android:textColor="#ffffff"
+        android:text="km/h"
+        />
+
+    <TextView
+        android:id="@+id/range_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/speed_data"
+        android:fontFamily="@font/nexabold"
+        android:layout_marginTop="50dp"
+        />
+
+
+    <ImageView
+        android:id="@+id/batteryIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="55dp"
+        android:layout_below="@+id/titl_angle"
+        android:src="@drawable/battery"/>
+
+    <com.natasa.progressviews.LineProgressBar
+        android:id="@+id/battery_progress"
+        android:layout_width="20dp"
+        android:layout_height="250dp"
+        app:bar_width="20dp"
+        app:bar_color="#b5b6b9"
+        app:progress_color="#d3f115"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="60dp"
+        app:progress_width="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/batteryIcon"/>
+
+    <TextView
+        android:id="@+id/battery_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/battery_progress"
+        android:layout_marginRight="25dp"
+        android:fontFamily="@font/nexabold"
+        android:textColor="#ffffff"
+        />
+
+    <ImageView
+        android:id="@+id/speedometer"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="55dp"
+        android:layout_below="@+id/titl_angle"
+        android:src="@drawable/speedometer"/>
+
+
+    <com.natasa.progressviews.LineProgressBar
+        android:id="@+id/rpm_progress"
+        android:layout_width="20dp"
+        android:layout_height="250dp"
+        app:bar_width="20dp"
+        app:bar_color="#b5b6b9"
+        app:progress_color="#15EAF1"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="60dp"
+        app:progress_width="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/speedometer"/>
+
+    <ImageView
+        android:id="@+id/home"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="110dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/homeicon"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp">
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="28dp">
+
+            <RelativeLayout
+                android:id="@+id/first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/map"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/mapicon"/>
+
+                <TextView
+                    android:id="@+id/maptext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nexabold"
+                    android:layout_below="@+id/map"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="5dp"
+                    android:text="Maps"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/music"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/musicicon"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nexabold"
+                    android:textColor="#ffffff"
+                    android:layout_below="@+id/music"
+                    android:layout_marginTop="5dp"
+                    android:text="Music"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/third"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/phone"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/phoneicon"/>
+
+                <TextView
+                    android:id="@+id/phonetext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nexabold"
+                    android:textColor="#ffffff"
+                    android:layout_below="@+id/phone"
+                    android:layout_marginTop="5dp"
+                    android:text="Phone"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/setting"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/settingicon"/>
+
+                <TextView
+                    android:id="@+id/settingtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nexabold"
+                    android:textColor="#ffffff"
+                    android:layout_below="@+id/setting"
+                    android:layout_marginTop="5dp"
+                    android:text="Settings"/>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

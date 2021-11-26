@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#7D8786</color>
+    <color name="purple_500">#434747</color>
+    <color name="purple_700">#2C2E2E</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="sliderback">#E6DADA</color>
+    <color name="startColor">#FF0000</color>
+    <color name="endColor">#F19191</color>
+
+    <array name="progressGradientColors">
+        <item>#F8CACA</item>
+        <item>#F17B7B</item>
+        <item>#FB4646</item>
+        <item>#E80A0A</item>
+    </array>
+
+</resources>
